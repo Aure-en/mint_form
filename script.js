@@ -65,8 +65,6 @@ function validateMail(event) {
 
     //Phone
 
-let phoneNumber;
-
 function keepNumbers(event) {
   event.target.value = event.target.value.replace(/\D/g, "");
 }
@@ -78,7 +76,7 @@ function formatPhone(event) {
 }
 
 function checkPhone(event) {
-  if (!/^1 ?\d{3} \d{3}-\d{4}/.test(event.target.value)) return false;
+  if (!/^(1 )?\(\d{3}\) \d{3}-\d{4}/.test(event.target.value)) return false;
   return true;
 }
 
@@ -245,6 +243,16 @@ mail.addEventListener("focus", defaultStyle);
   //Phone validation
 phone.addEventListener("input", keepNumbers);
 phone.addEventListener("input", formatPhone);
+phone.addEventListener("keydown", () => {
+  if (event.code != "Backspace") return;
+  phone.removeEventListener("input", keepNumbers);
+  phone.removeEventListener("input", formatPhone);
+});
+phone.addEventListener("keyup", () => {
+  if (event.code != "Backspace") return;
+  phone.addEventListener("input", keepNumbers);
+  phone.addEventListener("input", formatPhone);
+});
 phone.addEventListener("focus", () => phone.addEventListener("blur", validatePhone));
 phone.addEventListener("focus", displayVerify);
 
