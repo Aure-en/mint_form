@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Intuit Accounts - Sign Up</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <header class="document__header">
+      <div class="header__account">Already have an Intuit account?</div>
+      <a href="https://accounts.intuit.com/account-recovery.html?offering_id=Intuit.ifs.mint&namespace_id=50000026&redirect_url=https%3A%2F%2Fmint.intuit.com%2Foverview.event%3Ftask%3DS">I forgot my User ID or Password</a>
+      <button class="header__sign_in" type="button"><span class="account_lock"></span>Sign In</button>
+    </header>
+
+    <main>
+
+      <img class="main__logo" src="assets/intuit_logo.png">
+      <ul class="main__products">
+        <li><a href="https://www.mint.com/"><img src="assets/mint.png"></a></li>
+        <li><a href="https://quickbooks.intuit.com/"><img src="assets/quickbooks.png"></a></li>
+        <li><a href="https://turbotax.intuit.com/"><img src="assets/turbotax.png"></a></li>
+      </ul>
+
+      <form>
+
+        <header class="form__header">
+
+          <fieldset>Create an Intuit account</fieldset>
+
+          <legend>
+            One account for everything Intuit, including Mint.
+            <a href="https://accounts-help.lc.intuit.com/questions/1582580-creating-an-account">Learn more</a>
+          </legend>
+
+        </header>
+
+        <div class="form__main">
+
+          <div class="form__mail">
+
+            <label>Email address
+              <input type="mail" name="mail" title="" data-tooltip="You'll use this as your user ID." required>
+            </label>
+
+            <div class="form__mail_details"></div>
+
+          </div>
+
+          <div class="form__phone">
+
+            <label>Phone (recommended)
+              <input type="tel" name="phone" title="" data-tooltip="We strongly recommend adding a phone number. This will help verify your account and keep it safe.">
+            </label>
+
+            <div class="form__phone_details">Standard call, messaging or data rates may apply.</div>
+
+            <label class="form__phone_verify hidden">
+              <span>Verify with text message <em>(most secure)</em></span>
+              <input type="checkbox" name="text_message" checked>
+            </label>
+
+          </div>
+
+          <div class="form__password">
+
+            <label>Password
+              <input type="password" name="password" title="" data-tooltip="Create a password you've never used before. This will help keep your account safe." required>
+            </label>
+
+            <div class="form__password_details hidden">
+
+              <div class="password__characters">
+                <img src="assets/password_neutral.png">
+                Use 8 or more characters
+              </div>
+
+              <div class="password__case">
+                <img src="assets/password_neutral.png">
+                Use upper and lower case letters (e.g. Aa)
+              </div>
+
+              <div class="password__number">
+                <img src="assets/password_neutral.png">
+                Use a number (e.g. 1234)
+              </div>
+
+              <div class="password__symbol">
+                <img src="assets/password_neutral.png">
+                Use a symbol (e.g. !@#$)
+              </div>
+
+              <div class="password__strong">Your password is STRONG.</div>
+
+            </div>
+
+
+          </div>
+
+          <div class="form__confirm hidden">
+
+            <label>Confirm password
+              <input type="password" name="confirm_password" required>
+            </label>
+
+            <div class="form__confirm_details"></div>
+
+          </div>
+
+          <button class="form__submit" type="submit"><span class="account_lock"></span>Create Account</button>
+
+          <div class="form__terms">By clicking Create account, you agree to our<br><a href="https://www.mint.com/terms">Terms</a> and have read and acknowledge our <a href="https://www.intuit.com/privacy/">Privacy <br>Statement.</a></div>
+
+        </div>
+
+        <footer class="form__footer">
+          Invisible reCAPTCHA by Google <a href="https://policies.google.com/privacy?hl=en">Privacy Policy</a> and <a href="https://policies.google.com/terms?hl=en">Terms of Use</a>.
+        </footer>
+
+      </form>
+
+    </main>
+
+    <footer class="footer">
+
+      <ul class="footer__links">
+        <li><a href="https://www.intuit.com/legal/">Legal</a></li>
+        <li><a href="https://www.intuit.com/privacy/">Privacy</a></li>
+        <li><a href="https://security.intuit.com/">Security</a></li>
+      </ul>
+
+      <p class="footer__terms">© 2020 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB, TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.<br>
+        Terms and conditions, features, support, pricing, and service options subject to change without notice.</p>
+
+    </footer>
+
+  </div>
+
+</body>
+
+
+</html>

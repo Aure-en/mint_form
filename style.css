@@ -1,0 +1,355 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*General*/
+
+:root {
+  --main-color: #404040;
+  --small-print: #505050;
+  --accent-color: #0077c5;
+  --invalid-color: #eb3432;
+  --careful-color: #ea8a24;
+  --valid-color: #51aa4d;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #eceef1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: var(--main-color);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-size: 12px;
+}
+
+/*Header*/
+
+.document__header {
+  align-self: flex-end;
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(2, auto);
+  align-items: center;
+  font-size: 12px;
+  color: var(--small-print);
+  padding: 0.8em 2.5em;
+}
+
+.header__sign_in,
+.form__submit {
+  background: var(--accent-color);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.header__sign_in {
+  grid-row: 1 / 3;
+  grid-column: 2;
+  margin-left: 1em;
+  border: 1px solid var(--main-color);
+  padding: 8px 20px;
+}
+
+.account_lock {
+  height: 1em;
+  width: .8em;
+  display: inline-block;
+  background: url("assets/lock.png");
+  background-size: contain;
+  vertical-align: text-top;
+  margin-right: .5em;
+}
+
+/*Main*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5em 0;
+}
+
+/*Logo and products*/
+
+.main__products {
+  display: flex;
+}
+
+.main__logo,
+.main__products li {
+  margin: 0 1em 1.5em .1em;
+}
+
+/*Form*/
+
+form {
+  width: 380px;
+  padding-top: 2em;
+  border: 1px solid #c7c7c7;
+  background-color: #fff;
+}
+
+.form__main {
+  padding: 0 2em 2em 2em;
+}
+
+  /*Form Header*/
+
+.form__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+  /*Form Main*/
+
+fieldset {
+  font-size: 24px;
+  color: #4C4C4C;
+  align-self: center;
+  margin-bottom: 1em;
+}
+
+legend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5em;
+}
+
+input[type="mail"],
+input[type="tel"],
+input[type="password"] {
+  height: 2.5em;
+  margin-top: .75em;
+  border: 1px solid #C1C5C8;
+  border-radius: 5px;
+  padding: 0 .8em;
+  font-size: 16px;
+  background-image: url();
+  background-position: 97% center;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+}
+
+input[type="mail"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border: 1px solid #75b9f0;
+  box-shadow: 0 0 7px #75b9f0;
+}
+
+.form__submit {
+  width: 100%;
+  font-size: 15.75px;
+  border: none;
+  height: 2.5em;
+  margin-top: 2em;
+}
+
+.form__terms {
+  margin-top: 3.5em;
+  line-height: 20px;
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  color: #757575;
+}
+
+.form__mail_details,
+.form__phone_details,
+.form__password_details,
+.form__confirm_details {
+  font-size: 12px;
+  margin: .5em 0;
+  line-height: 18px;
+}
+
+.form__mail_details {
+  color: var(--invalid-color);
+}
+
+.form__phone_details {
+  font-size: 10px;
+}
+
+.form__phone_verify {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.form__phone_verify em {
+  font-size: 12px;
+  color: #757575;
+  font-style: italic;
+}
+
+.form__phone_verify input {
+  height: 17px;
+  width: 17px;
+  margin-right: 1em;
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form__password_details {
+  color: #7d7d7d;
+  font-size: 11.4px;
+  padding: 1em;
+}
+
+.form__password_details img {
+  width: 10px;
+  height: 10px;
+  margin-right: .5em;
+}
+
+.form__confirm_details {
+  color: var(--invalid-color);
+}
+
+.form__password input {
+  background-image: url('assets/lock_neutral.png')
+}
+
+  /*Form Footer*/
+
+.form__footer {
+  background-color: #eceef1;
+  color: #8D9096;
+  text-align: center;
+  padding: 2em;
+}
+
+.form__footer,
+.form__footer a {
+  font-size: 10px;
+}
+
+.password__strong {
+  display: none;
+  color: var(--valid-color);
+}
+
+/*Footer*/
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2em 2em 2em;
+  text-align: center;
+}
+
+.footer ul {
+  display: flex;
+}
+
+.footer ul li {
+  margin-right: 1em;
+}
+
+.footer,
+.footer a {
+  font-size: 12px;
+  color: var(--small-print);
+  line-height: 18px;
+}
+
+/*Tooltips*/
+
+.tooltip {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 220px;
+  padding: 1em 25px;
+  background-color: #404040;
+  color: #fff;
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: 5px;
+}
+
+/*Hidden elements*/
+
+.hidden {
+  display: none;
+}
